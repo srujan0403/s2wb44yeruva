@@ -6,7 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var icemagicRouter = require('./routes/icemagic');
+var fruitsRouter = require('./routes/fruits');
 var addmodsRouter = require('./routes/addmods');
 var selectorRouter = require('./routes/selector');
 
@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/icemagic', icemagicRouter);
+app.use('/fruits', fruitsRouter);
 app.use('/addmods', addmodsRouter);
 app.use('/selector', selectorRouter);
 // catch 404 and forward to error handler

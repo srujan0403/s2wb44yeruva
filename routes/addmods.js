@@ -1,14 +1,24 @@
-var express = require('express');
-var router = express.Router();
-
-
-/* GET home page. */
-router.get('/', function (req, res, next) {
-  let query = req.query
-  console.log(`rows ${query.rows}`)
-  console.log(`cols ${query.cols}`)
-    res.render('addmods', { title: "Add Mods", query: query});
-});
-
-
-module.exports = router;
+extends layout
+block content
+  h1= title
+  
+  p Rows = #{query.rows} and Columns = #{query.cols}
+    -
+        rows= Number(query.rows)
+        col= Number(query.cols)
+    if !Number.isInteger(rows)
+        p below mentioned rows are not accurate
+    if !Number.isInteger(col)
+        p below mentioned columns are not appropriate
+    if rows < 0 || rows > 10
+        p below mentioned rows are in one to ten range
+    if col < 0 || col > 10
+        p below mentioned colums are in one to three range
+    
+       table    
+            - for(let i=0; i<rows; i++) {
+               tr
+                 - for(let a=0; a<col; a++) {
+                     td= i+a*a
+                 -}          
+            - }
