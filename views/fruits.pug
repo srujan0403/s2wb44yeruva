@@ -8,21 +8,21 @@ block content
                 let fruits = [
                     {
                         "Itemname": "Apple",
-                        "Quantity": 22,
-                        "price": "Five USD"
+                        "Quantity": 12,
+                        "price": "Three USD"
                     },
                     {
                         "Itemname": "Banana",
-                        "Quantity": 40,
-                        "price": "Twenty USD"
+                        "Quantity": 30,
+                        "price": "Five USD"
                     },
                     {
                         "Itemname": "Grape",
-                        "Quantity": 15,
-                        "price": "Twenty Two USD"
+                        "Quantity": 21,
+                        "price": "Seven USD"
                     },                   
                 ]
-            each v,index in icemagic
+            each v,index in fruits
                 div(class="col-sm-2" onclick=`buy(${index})`) #{v.Itemname}
                 div(class="col-sm-2" onclick=`buy(${index})`) #{v.Quantity}
                 div(class="col-sm-2" onclick=`buy(${index})`) #{v.price}
