@@ -15,10 +15,10 @@ block content
     if col < 0 || col > 10
         p below mentioned colums are in one to three range
     
-    table    
-        - for(let i=0; i<rows; i++) {
-            tr
-                - for(let a=0; a<col; a++) {
-                    td= i+a*a
-                -}          
-        - }
+       table    
+            - for(let i=0; i<rows; i++) {
+               tr
+                 - for(let a=0; a<col; a++) {
+                     td= i+a*a
+                 -}          
+            - }
